@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Reverse engineering a fake news generator</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html>
+<head>
+    <title>Make Your Own News - Breaking News Generator</title>
+
+    <meta property="og:title" content="The Neutral Ground News Generator">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.neutralgroundnews.com/">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Make Your Own News">
+    <meta property="og:description"
+          content="Neutral Ground News is a satirical online entertainment publication that focuses primarily on the people, places and things in the city of New Orleans and surrounding areas… when the meds kick in.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   <script type="text/javascript" src="http://breakyourownnews.com/script.js?v=2.15"></script>
+    <script src="http://breakyourownnews.com/base64binary.js"></script>
+    <script src="http://breakyourownnews.com/oauth.js"></script>
+    <link type="text/css" href="style.css?v=2.14" rel="stylesheet" media="screen"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="grid">
+        <section class="intro">
+            <div class="group">
+                <h1 class="logo">Make Your Own News</h1>
+
+                <p class="intro__text">Make fake news, for real. <br/> <span class="intro__textSpan">Enter your headline, news ticker copy, and a jpg or png and your really fake news will be ready for download.</span></p>
+            </div>
+
+            <div class="build-form">
+
+                <div class="build-form__item">
+                    <strong>Your Headline</strong><br/>
+                    <input id="textBox" placeholder="Write your story here..."/>
+                </div><!--
+             --><div class="build-form__item">
+                    <strong>Ticker Copy</strong><br/>
+                    <input id="tickerBox" placeholder="Fill out the ticker with the latest updates..."/>
+                </div>
+                <strong>Your Image</strong><br/>
+                <input type="file" id="imageLoader" name="imageLoader"/>
+            </div>
+
+        </section><!--
+        --><section class="main">
+            <canvas id="canvasOne" width="1280" height="720" class="byon-canvas">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+
+            <div class="share-row">
+            <a href="#" class="button button--yellow" id="btn-download" download="ngn-news.png">Download</a>
+           <!-- <button class="button button--facebook" id="btn-facebook-start" >Post to Facebook</button>
+            <button class="button button--twitter" id="btn-twitter-start">Post to Twitter</button>
+            <button class="button button--tumblr" id="btn-tumblr-start">Post to Tumblr</button>
+            <button class="button" id="btn-imgur">Upload to imgur</button> -->
+
+
+                <div class="facebook-box">
+                    <p>Your post:</p>
+                    <input id="facebook-text" class="social-text" placeholder="Write your message here..." maxlength="300">
+                    <button class="button button--facebook" id="btn-facebook">Post it!</button>
+                </div>
+
+
+                <div class="twitter-box">
+                    <p>Write your tweet...</p>
+                    <input id="twitter-text" class="social-text"  value="Breaking News! http://breakyourownnews.com" maxlength="115">
+                    <button class="button button--twitter" id="btn-twitter">Post it!</button>
+                </div>
+
+                <div class="tumblr-box">
+                    <p>Choose which blog you'd like to post to...</p>
+                    <select class="select" id="tumblr__blogs"></select>
+                    <p>Add a caption...</p>
+                    <input id="tumblr__text" class="social-text" value="Breaking News! http://neutralgroundnews.com" maxlength="300">
+                    <p>And add any tags you'd like... (separated by commas!)</p>
+                    <input id="tumblr__tags" class="social-text" value="break your own news, breakyourownnews" maxlength="300">
+                    <button class="button button--tumblr" id="btn-tumblr">Post it!</button>
+                </div>
+
+                <div class="upload-response"></div>
+            </div>
+
+        </section>
+    </div>
+   
+    <footer>
+			<div>© 2017 NEUTRAL GROUND NEWS</div>
+    </footer>
+</div>
+
+<!-- Add our google analytics script if placed outisde our website -->
+	
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
